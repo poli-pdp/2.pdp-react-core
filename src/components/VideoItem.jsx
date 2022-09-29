@@ -1,12 +1,15 @@
+import styles from './VideoItem.module.css';
+import View from './View';
 const VideoItem = ({ title, duration, date, description }) => {
 	return (
-		<div>
+		<div className={styles.container}>
 			<h3>{title}</h3>
 			<div>
-				<span>{duration}</span>
+				<span className={`${styles.duration} ${styles.color}`}>{duration}</span>
 				<span>{date}</span>
 			</div>
 			<p>{description}</p>
+			<View />
 		</div>
 	);
 };

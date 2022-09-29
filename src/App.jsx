@@ -1,8 +1,11 @@
 import VideoItem from './components/VideoItem';
 import VideoList from './components/VideoList';
+import styles from './App.module.css';
+import FormNoControlado from './components/FormNoControlado';
+import FormControlado from './components/FormControlado';
 
 const App = () => (
-	<>
+	<div className={styles.container}>
 		<VideoList title='Programacion'>
 			<VideoItem
 				title='Video de React'
@@ -26,7 +29,12 @@ const App = () => (
 			/>
 		</VideoList>
 		<VideoList title='Salsa' />
-	</>
+		<br />
+		<FormNoControlado />
+		<br />
+		<FormControlado />
+		<br />
+	</div>
 );
 
 export default App;
